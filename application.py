@@ -17,6 +17,10 @@ def translate(word):
     elif word.title() in data:
         return data[word.title()]
 
+    # Acronym Checkpoint
+    elif word.upper() in data:
+        return data[word.upper()]
+
     # Basic algorithm to check for incorrectly typed words and match
     elif len(get_close_matches(word, data.keys())) > 0:
         wordCheck = input("Did you mean %s instead? Enter Y if yes, or N if no." %
