@@ -8,6 +8,8 @@ data = json.load(open("data.json"))
 
 
 def translate(word):
+    # Make all words automatically lowercase
+    word = word.lower()
     if word in data:
         return data[word]
     else:
