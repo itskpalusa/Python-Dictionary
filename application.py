@@ -1,4 +1,4 @@
-#import json
+# import json
 import json
 # import difflib to compare words
 from difflib import get_close_matches
@@ -12,6 +12,11 @@ def translate(word):
     word = word.lower()
     if word in data:
         return data[word]
+
+     # Proper noun checkpoint
+    elif word.title() in data:
+        return data[word.title()]
+
     # Basic algorithm to check for incorrectly typed words and match
     elif len(get_close_matches(word, data.keys())) > 0:
         wordCheck = input("Did you mean %s instead? Enter Y if yes, or N if no." %
