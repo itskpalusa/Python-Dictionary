@@ -1,6 +1,6 @@
 # Python Dictionary
 
-Using a basic json file, the program takes user input from the command line and gives the dictionary defintion of the word.
+Using a basic json file, the program takes user input from the command line and gives the dictionary definition of the word.
 
 ## Current Features:
 
@@ -17,4 +17,4 @@ Using a basic json file, the program takes user input from the command line and 
 ## Future Features:
 
 - Implement another constantly updating database to pull from to ensure user content is always updated
-- GUI interface
+- GUI 
