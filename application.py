@@ -1,9 +1,7 @@
 #import json
 import json
-
 # import difflib to compare words
 from difflib import get_close_matches
-
 # import data json file for dictionary word
 data = json.load(open("data.json"))
 
@@ -32,4 +30,11 @@ def translate(word):
 word = input("Enter word: ")
 
 # Print definition
-print(translate(word))
+output = translate(word)
+
+# Multiple definition output organization
+if type(output) == list:
+    for item in output:
+        print(item)
+    else:
+        print(output)
