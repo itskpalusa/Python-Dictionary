@@ -4,6 +4,8 @@ import json
 # import data json file for dictionary word
 data = json.load(open("data.json"))
 
+# Function to translate/define word
+
 
 def translate(word):
     if word in data:
@@ -12,6 +14,8 @@ def translate(word):
         return "The word doesn't exist within the database."
 
 
+# Gather input from user
 word = input("Enter word: ")
 
+# Print defineition
 print(translate(word))
