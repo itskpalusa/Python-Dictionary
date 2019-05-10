@@ -7,14 +7,14 @@ from difflib import get_close_matches
 # import data json file for dictionary word
 data = json.load(open("data.json"))
 
+
 # Function to translate/define word
-
-
 def translate(word):
     # Make all words automatically lowercase
     word = word.lower()
     if word in data:
         return data[word]
+    # Basic algorithm to check for incorrectly typed words and match
     elif len(get_close_matches(word, data.keys())) > 0:
         wordCheck = input("Did you mean %s instead? Enter Y if yes, or N if no." %
                           get_close_matches(word, data.keys())[0])
@@ -24,7 +24,6 @@ def translate(word):
             return "The word doesn't exist within the database."
         else:
             return "Please doublecheck your entry."
-
     else:
         return "The word doesn't exist within the database."
 
